@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.number{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background:#c35600;
+  color:#fff;
+};
+

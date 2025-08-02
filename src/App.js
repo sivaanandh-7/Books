@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import EventExamples from './EventExamples';
+import Book from './Book';
+import { books } from './books';
 
-function App() {
+const BookList = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Amazon Best Sellers</h1>
+      <section className="booklist">
+        <EventExamples />
+        {books.map((book, index) => (
+          <Book {...book} key={book.id} number={index} />
+        ))}
+      </section>
+    </>
   );
-}
+};
 
-export default App;
+export default BookList;
